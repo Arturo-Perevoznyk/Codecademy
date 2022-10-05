@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    font-family: 'Helvetica';
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+    /*HERE'S THE KEY TO MOVE THE WHOLE PAGE DOWN 69PX*/
+    padding-top: 69px;
+    padding-bottom: 20px;
+}
+
+h2,
+h4 {
+    margin: 10px;
+}
+
+/*Header*/
+
+header {
+    height: 69px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    /*I saw in a video:https://www.youtube.com/watch?v=GxwHXxumdQk dunno why yet!*/
+    display: block;
+    /*---------------------------------------------------------------------------*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    border-bottom: 1px solid seashell;
+    z-index: 2;
+}
+
+.navigation {
+    /*To get rid of the dots before the item*/
+    list-style-type: none;
+    float: right;
+    padding-top: 8px;
+}
+
+li {
+    display: inline;
+    margin-left: 25px;
+    text-decoration: underline;
+}
+
+#logo {
+    height: 50px;
+    float: left;
+}
+
+/*  Main and footer should be moved because of the fixed navigation bar */
+
+/*
+
+UPDATE: no need to do this anymore. Was giving problems with the bottom-margin on the footer. Fixed like this: added a PADDING
+    to the BODY (69px). Now the whole page is fixed in an elegant way! :)
+main, footer {
+    position: relative;
+    top: 69px;
+}
+
+*/
+
+
+/*Our Mission Part*/
+.mission {
+    background-image: url(resources/img-mission-background.jpg);
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.slogan {
+    background-color: black;
+    width: 100%;
+}
+
+/*Tea of the month*/
+
+#question {
+    margin-bottom: 20px;
+}
+
+.Tea-of-the-Month {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.teas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: auto;
+
+}
+
+.img-tea {
+    height: 200px;
+    width: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*Locations*/
+
+.locations {
+    background-image: url(resources/img-locations-background.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 500px;
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.location {
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.middle {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/*Contact*/
+
+.contact {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Footer*/
+
+footer {
+    text-align: left;
+    margin-left: 20px;
+}

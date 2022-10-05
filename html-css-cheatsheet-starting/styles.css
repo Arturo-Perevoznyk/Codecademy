@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: azure;
+    font-family: sans-serif;
+}
+
+/*Here we´ll take a moment to center everithing:*/
+    h1, h2 {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: blue;
+}
+
+table, h2 {
+    margin: 20px auto;
+}
+
+table {
+    border: 3px solid aqua;
+}
+
+th {
+    background-color: blueviolet;
+}
+
+#color5 {
+    color:white;
+}
