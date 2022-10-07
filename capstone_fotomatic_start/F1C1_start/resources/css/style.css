@@ -38,8 +38,8 @@ html {
 }
 
 /* Header */
-
-header { /*So basically, I didn't understand why this double tagging (>content< inside the >header<) and I moved everything 
+/*
+header { So basically, I didn't understand why this double tagging (>content< inside the >header<) and I moved everything 
   to the inner tag. I did it because otherwise .content wouldn't be vertically align inside the header!*/
   /*
   position: fixed;
@@ -51,8 +51,9 @@ header { /*So basically, I didn't understand why this double tagging (>content< 
   box-sizing: border-box;
   border: 1px solid orange;
   height: 5.3125rem;
-  z-index: 99;*/
-}
+  z-index: 99;
+}*/
+
 
 header .content {
   /*This is the stuff that was in the header*/
@@ -157,6 +158,11 @@ header .mobile {
   align-items: flex-start;
   height: 43.5rem;
   background-color: black;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 10.625rem;
+  padding-bottom: 10.625rem;
 }
 
 #sign-up-cta {
@@ -252,7 +258,8 @@ header .mobile {
 
 /* Features Section */
 
-#features-section {
+#features-section {/*ALL GOOD*/
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: 4rem 5%;
@@ -260,21 +267,35 @@ header .mobile {
 }
 
 .feature {
-  flex: 1;
+  box-sizing: border-box;
+  flex: 1;/*???*/
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
 }
 
+/* mistery to solve
 .feature .image-container {
-  width: 90%;
-  height: 65%;
+  box-sizing: border-box;
+  width: 90%;  || THIS 2 SHOULD BE INCLUDED, BUT I DON'T KNOW HOW TO DO IT YET, GIVES ME ERRORS
+  height: 65%; ||
   margin: 0 auto;
+  display: inline-block;
+  border:2px solid yellow;
+}
+*/
+
+
+.image-container img {
+  box-sizing: border-box;
+  max-width: 100%; /*THIS WAS THE THING THAT ANNOYED ME SO FUCKING MUCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  margin-bottom: 2.5rem;
 }
 
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
+  line-height: 1.2  ;
   font-weight: bold;
   color: #4a4a4a;
 }
