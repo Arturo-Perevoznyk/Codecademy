@@ -79,7 +79,8 @@ header .logo {
     flex-basis : 0;   ➜ The div does not have a starting value as such and will 
                      take up screen as per the screen size available for
                      e.g:- if 3 divs are in the wrapper then each div will take 33%.
-    TO ME, THIS IS A WEIRD WAY OF DOING THE NAV. WHY NOT JUST TO DO FLEX:left AND FLEX:right??
+    TO ME, THIS IS A WEIRD WAY OF DOING THE NAV. WHY NOT JUST TO DO float:left AND float:right?? ANSWER: it's
+    actually easier (once you understand Flex) and more responsive.
     */
   flex-grow: 1;
   flex-shrink: 1;
@@ -340,17 +341,20 @@ header .mobile {
 }
 
 #filters-section .content {
+  box-sizing: border-box;
   padding: 0 .625rem;
   margin-bottom: 5rem;
 }
 
 #filters-section .content h2 {
+  box-sizing: border-box;
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
 }
 
 #filters-section .content h3 {
+  box-sizing: border-box;
   font-size: 1rem;
   line-height: 1.4;
   font-weight: 300;
@@ -358,8 +362,10 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  box-sizing: border-box;
   max-width: 100%;
-  padding: 0 1%;
+  margin: 0 1%;
+  display: flex;
 }
 
 @media only screen and (max-width: 760px) {
@@ -396,13 +402,15 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
-}
-
-#quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section content {
+  display: flex;
+  align-items: center;
+}
+
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
