@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #413D13;
+    --light-green: #27250c;
+}
+
+/* body {
+    padding-top: 5rem;
+} */
+
+/*NAVIGATION BAR SECTION*/
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--green);
+    padding-right: 2%;
+    width: 100%;
+}
+
+nav>img {
+    height: 5rem;
+    width: auto;
+    margin-left: 2%;
+}
+
+nav ul {
+    display: flex;
+    gap: 4%;
+    /*To get rid of the li dots*/
+    list-style-type: none;
+    align-items: center;
+    flex: 1;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav li {
+    transition: font-size 250ms;
+}
+
+.menu-icon {
+    width: 2.5rem;
+    display: none;
+}
+
+/*nav li:nth-of-type(n) selects the number n li inside nav -> VERY HANDY */
+nav li:nth-of-type(1) {
+    margin-left: auto;
+}
+
+/*This pushes both the login and signup buttons to right*/
+nav li:nth-of-type(7) {
+    margin-left: auto;
+}
+
+.button {
+    border: 2px solid white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+}
+
+.sign-up {
+    background-color: white;
+    color: #663312;
+}
+
+nav li:hover {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    nav li:nth-of-type(1) {
+        display: none;
+    }
+
+    nav li:nth-of-type(3) {
+        display: none;
+    }
+
+    nav li:nth-of-type(4) {
+        display: none;
+    }
+
+    nav li:nth-of-type(5) {
+        display: none;
+    }
+
+    nav li:nth-of-type(6) {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    nav>img {
+        height: 3.6rem;
+    }
+
+    nav ul {
+        font-size: 1rem;
+    }
+}
+
+/*SPLASH SECTION*/
+.splash {
+    /* height: 70%; I´m not gonna use body percentage because on mobile screens the height is way more big than the width and it gets
+    too high in height */
+    height: 60rem;
+    background-image: url(./christophe-rollando-UqJ9r4ptgQ8-unsplash.jpg);
+    background-position: center;
+    /*Background-size: cover resices the image to cover the entire container, even if it has to stretch or cut the image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 10rem;
+    justify-content: center;
+}
+
+.splash h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6rem;
+    color: #824217;
+}
+
+@media only screen and (max-width:930px) {
+    .splash {
+        background-position: bottom;
+        height: 50rem;
+    }
+
+    .splash h2 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .splash h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width:413px) {
+    .splash h2 {
+        font-size: 2rem;
+    }
+}
+
+/*FURNITURE GALLERY PART*/
+
+.gallery>h2 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 6rem;
+    text-align: center;
+    margin: 10rem auto 4rem;
+    line-height: 7rem;
+}
+
+.gallery {
+    width: 85%;
+    margin: auto;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    /* border: 3px solid red; */
+}
+
+
+.gallery-container .img-container {
+    /* border: 4px solid yellow; */
+    height: 25rem;
+    /* flex-grow: 1; */
+    flex: 1;
+}
+
+.gallery-container img {
+    object-fit: cover;
+    max-height: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+}
+
+
+@media only screen and (max-width: 880px) {
+    .gallery-container {
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        /* border: 3px solid red; */
+    }
+    .gallery-container .img-container {
+        /* border: 4px solid yellow; */
+        width: 100%;
+    }
+    .gallery-container img {
+        object-fit: cover;
+        min-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .gallery>h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+
+/*TEAM*/
+
+.team {
+    margin: 10rem auto;
+    /* border: 3px solid red; */
+
+}
+
+.team>h1 {
+    font-family: 'Vidaloka', serif;
+
+    margin: auto;
+    text-align: center;
+    font-size: 7rem;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid black;
+    width: 70%;
+}
+
+.container {
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+}
+
+.worker {
+    flex-basis: 30rem;
+    height: 45rem;
+    /* border: 5px solid magenta; */
+}
+
+.worker .img-container {
+    /* border: 3px solid green; */
+    height: 35rem;
+    border-radius: 10px;
+}
+
+.worker img {
+    border-radius: 10px;
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.worker h2 {
+    margin-top: 1rem;
+    font-family: 'Vidaloka', serif;
+    font-size: 3rem;
+    text-align: center;
+    /* border: 3px solid yellow; */
+}
+
+
+
+
+.worker {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 560px){
+    .team>h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+/*OUR STORY SECTION*/
+
+.story {
+    display: flex;
+    margin: 7rem 4%;
+}
+
+.story h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 5rem;
+    border-bottom: 2px solid white;
+
+    color: white;
+    margin-bottom: 2rem;
+    /* border: 2px solid yellow; */
+}
+
+.story p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6rem;
+    color: white;
+    text-align: justify;
+    /* border: 2px solid yellow; */
+}
+
+.story div:nth-of-type(1) p:nth-of-type(2) {
+    font-size: 1.8rem;
+    text-align: end;
+}
+
+.story div:nth-of-type(1) {
+    background-color: var(--light-green);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 2rem 4rem;
+    /* border: 5px solid red; */
+}
+
+.story div:nth-of-type(2) {
+    border-top: 10px solid var(--light-green);
+    border-right: 10px solid var(--light-green);
+    border-bottom: 10px solid var(--light-green);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.story img {
+    /* border: 3px solid blue; */
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .story {
+        flex-direction: column;
+    }
+    .story div:nth-of-type(1) {
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+    .story div:nth-of-type(2) {
+        border-left: 10px solid var(--light-green);
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+    }
+    .story h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .story p {
+        font-size: 1.5rem;
+    }
+    
+}
+ 
+@media only screen and (max-width: 560px) {
+    .story h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .story p {
+        font-size: 1rem;
+    }
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--green);
+    height: 7rem;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+}
