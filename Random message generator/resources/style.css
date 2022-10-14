@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(./pramod-tiwari-ktJ298VYSC4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3rem;
+    background-image: radial-gradient(circle, #dcda9a, #afd8a2, #85d1b4, #65c7c7, #5fbad4, #67b1d9, #77a7d9, #8b9cd3, #9995d0, #a78dca, #b685c1, #c37cb4);
+    border: 5px solid black;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-weight: 300;
+    background-color: #00000067;
+    font-size: 1.4rem;
+    margin: 1.3rem auto;
+    padding: 0.8rem;
+}
+
+.container {
+    display: flex;
+    margin-top: 6rem;
+    /* border: 4px solid red; */
+}
+
+.button {
+    width: max-content;
+    padding: 1rem;
+    border: 4px solid black;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #c37cb4, #e6889d, #f2a08b, #edbd88, #dcda9a);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+    color: black;
+    font-weight: 500;
+    transition: color 200ms, border 250ms;
+}
+
+.button:hover {
+    border: 4px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.random-container {
+    /* border: 3px solid green; */
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 5px;
+    border: 3px solid black;
+    min-height: 100%;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    flex: 1;
+    display: flex;
+    padding-left: 10%;  
+    align-items: center;
+}
+
+#random-phrase {
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer {
+    position: absolute;
+    font-family: 'Roboto Mono', monospace;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.7rem;
+    width: 100%;
+    border-top: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.452);
+}
