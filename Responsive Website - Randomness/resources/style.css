@@ -137,7 +137,7 @@ header li a {
 
 .mission-box {
     margin-top: 5rem;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     position: relative;
     padding: 3%;

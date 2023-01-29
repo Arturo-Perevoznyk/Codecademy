@@ -26,15 +26,14 @@ header {
     width: 100%;
     box-sizing: border-box;
     background-color: black;
-    /*I saw in a video:https://www.youtube.com/watch?v=GxwHXxumdQk dunno why yet!*/
-    display: block;
-    /*---------------------------------------------------------------------------*/
     position: fixed;
     top: 0px;
     left: 0px;
     padding: 10px;
     border-bottom: 1px solid seashell;
     z-index: 2;
+    /* To disable text selection */
+    user-select: none;
 }
 
 .navigation {
@@ -48,6 +47,7 @@ li {
     display: inline;
     margin-left: 25px;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #logo {
@@ -55,25 +55,12 @@ li {
     float: left;
 }
 
-/*  Main and footer should be moved because of the fixed navigation bar */
-
-/*
-
-UPDATE: no need to do this anymore. Was giving problems with the bottom-margin on the footer. Fixed like this: added a PADDING
-    to the BODY (69px). Now the whole page is fixed in an elegant way! :)
-main, footer {
-    position: relative;
-    top: 69px;
-}
-
-*/
-
-
 /*Our Mission Part*/
 .mission {
     background-image: url(resources/img-mission-background.jpg);
-    width: 1200px;
-    height: 700px;
+    background-position: center;
+    width: 93%;
+    height: 700px; /*WHY CAN'T THIS BE SET USING PERCENTAGE INSTEAD OF PX??*/
     margin: auto;
     display: flex;
     align-items: center;
@@ -99,9 +86,7 @@ main, footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 1000px;
     margin: auto;
-
 }
 
 .img-tea {
@@ -115,12 +100,13 @@ main, footer {
 
 .locations {
     background-image: url(resources/img-locations-background.jpg);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    height: 500px;
-    width: 1200px;
+    height: 500px; /* SHOULD BE SET TO PERCENTAGE FOR BEST PRACTICES*/
+    width: 95%;
     margin: auto;
+    padding: 0.5rem;
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
